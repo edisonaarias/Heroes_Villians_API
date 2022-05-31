@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-p@bsr+g8cca_@fcrx%=os0mom^1)ltcya^wxt!j-_fg+55@#*f
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroes_villians_database',
+        'NAME': 'heroes_villains_database',
         'HOST': 'localhost', 
         'USER': 'root',
         'PASSWORD': '555429ea',      

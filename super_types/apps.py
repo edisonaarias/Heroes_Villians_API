@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class HeroesVilliansConfig(AppConfig):
+class super_typesConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'heroes_villians'
+    name = 'super_types'

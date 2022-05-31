@@ -19,7 +19,7 @@ def heroes_villains_list(request):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
-@api_view (['GET', 'PUT'])
+@api_view (['GET', 'PUT', 'DELETE'])
 def hero_villain_detail(request, pk):
     hero_villain = get_object_or_404(Hero_Villain,pk=pk)
     if request.method == 'GET':
@@ -30,3 +30,6 @@ def hero_villain_detail(request, pk):
           serializer.is_valid(raise_exception=True)
           serializer.save()
           return Response(serializer.data)
+    elif request.method == 'DELETE':
+        hero_villain.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

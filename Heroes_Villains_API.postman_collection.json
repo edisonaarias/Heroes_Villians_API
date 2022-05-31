@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "cbfe7431-8031-4ff3-b18a-6db993dcbf5b",
+		"name": "Heroes_Villains_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21117638"
+	},
+	"item": [
+		{
+			"name": "Get_All_Heroes_Villains",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Hero_Villain",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 1,\r\n        \"type\": \"Hero\",\r\n        \"name\": \"Green Arrow\",\r\n        \"alter_ego\": \"Oliver Queen\",\r\n        \"primary_ability\": \"Markman\",\r\n        \"secondary_ability\": \"Hand to hand combat\",\r\n        \"catchphrase\": \"\\\"You have no idea how powerful the truth can be\\\"\",\r\n        \"super_type_id\": 1\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/heroes_villains/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"heroes_villains",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Hero_villain_By_Id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Hero_Villain",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Hero_Villain",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

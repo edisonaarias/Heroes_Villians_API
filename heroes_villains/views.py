@@ -9,6 +9,28 @@ from heroes_villains import serializers
 @api_view(['GET','POST'])
 def heroes_villains_list(request):
     if request.method == 'GET':
+
+        super_type_param = request.query_params.get("super_type")
+        supers = Hero_Villain.objects.all()
+        serializer = Hero_VillainSerializer(supers, many=True)
+        custom_response={}
+        
+        if super_type_param == 'Hero':
+            supers =Hero_Villain.objects.filter(super_type_id = 1)
+            serializer = Hero_VillainSerializer(supers, many=True)
+            custom_response['Heroes'] = [
+               serializer.data 
+            ]
+            return Response(custom_response)
+
+        elif super_type_param == 'Villain':
+            supers = Hero_Villain.objects.filter(super_type_id= 2)
+            serializer = Hero_VillainSerializer(supers, many=True)
+            custom_response['Villains'] = [
+                serializer.data
+            ]
+            return Response(custom_response)
+
         heroes_villains = Hero_Villain.objects.all()
         serializer = Hero_VillainSerializer(heroes_villains, many=True)
         return Response(serializer.data)
